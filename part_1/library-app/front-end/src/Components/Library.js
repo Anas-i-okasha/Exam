@@ -16,10 +16,12 @@ const Library=()=> {
         console.log(err)
     })
    } 
+   const renderBooks=books.map((item)=>{ return <h1>Title : {item.title}</h1> , <h1> Author:{item.author} </h1>  , <h1>Publisher : {item.publisher}</h1> })
     return (
       <div>
+          {renderBooks}
 
-   {books.map((item)=>{ return <h1>Title : {item.title}</h1> , <h1> Author:{item.author} </h1>  , <h1>Publisher : {item.publisher}</h1> })}
+   
            <button onClick={getAll}></button>
       </div>
     )
