@@ -3,10 +3,10 @@ import Axios from 'axios'
 
 const Library=()=> {
     const [books , setBooks]=[]
-    const [title , setTile]=("")
-    const [author , setAuthor]=('')
-    const [publisher , setPublisher]=('')
-    const [publisher_at , setPublesher_at]=('')
+    const [title , setTile]=state("")
+    const [author , setAuthor]=state('')
+    const [publisher , setPublisher]=state('')
+    const [publisher_at , setPublesher_at]=state('')
 
    const getAll=()=>{
     Axios.get('http://localhost:3000').then((responce)=>{

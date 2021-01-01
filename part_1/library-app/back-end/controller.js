@@ -16,15 +16,24 @@ const getAllBooks=(req , res)=>{
 }
 
 const getBookById=(req , res)=>{
-    const id = req.body
+    const {id} = req.params
 mysql = `SELECT * FROM books WHERE (id ) values (?)`;
 db.query(mysql , [id], (err , result)=>{
 res.json('specific book')
 })
 }
 
+const deleteBook=(req , res)=>{
+ const {id}= req.params
+ mysql = `DELETE * from books Where (id) VALUES (?)`;
+ db.query(mysql , (err , result)=>{
+     res.json('delete sucessfully')
+ })
+}
+
 module.exports={
     addNewBook,
     getAllBooks,
-    getBookById
+    getBookById,
+    deleteBook
 }
