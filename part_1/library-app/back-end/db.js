@@ -12,6 +12,4 @@ const connection = mysql.createConnection({
 
       console.log('Connected db')
   })
-
-  // create database books (id INT NOT)
    
