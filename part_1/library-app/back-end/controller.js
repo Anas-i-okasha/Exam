@@ -7,8 +7,15 @@ db.query(mysql , (err , result)=>{
 res.json ('Added sucess')
 })
 }
+const getAllBooks=(req , res)=>{
+    mysql = `SELECT * FROM books (title , author , publish , published_at)`;
+    db.query(mysql , (err , result)=>{
+        res.json('give me all books')
+    })
 
+}
 
 module.exports={
-    addNewBook
+    addNewBook,
+    getAllBooks
 }
