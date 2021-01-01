@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import './App.css';
+import React from 'react'
+import {Browser as Router , Route , Link} from 'react-router-dom'
+import Library from './Components/Library'
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
-  render() {
-    return (
-      <div>
-        <h1>HELLO WORLD</h1>
-      </div>
-    );
-  }
+const App=()=> {
+  return (
+    <div>
+      <Router>
+        <Route path='/library'>  component={Library}   </Route>
+      </Router>
+
+      
+    </div>
+  )
 }
+export default App

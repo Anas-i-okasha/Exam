@@ -15,7 +15,16 @@ const getAllBooks=(req , res)=>{
 
 }
 
+const getBookById=(req , res)=>{
+    const id = req.body
+mysql = `SELECT * FROM books WHERE (id ) values (?)`;
+db.query(mysql , [id], (err , result)=>{
+res.json('specific book')
+})
+}
+
 module.exports={
     addNewBook,
-    getAllBooks
+    getAllBooks,
+    getBookById
 }
